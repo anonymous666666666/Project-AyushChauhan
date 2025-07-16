@@ -6,28 +6,28 @@
 -- Stu_name (text), Department (text), email_id (text ),Phone_no (numeric), Address (text), 
 -- Date_of_birth (date), Gender (text), Major (text), GPA (numeric),Grade (text) should be A,B,C etc.
 
-CREATE DATABASE student_database;  -- Creates Database student_database
+Create Database student_database;  -- Creates Database student_database
 use student_database;   -- use student_database
 
 -- Create table student_table
-CREATE TABLE student_table (  
-    Student_id INT PRIMARY KEY,
-    Stu_name VARCHAR(100),
-    Department VARCHAR(100),
-    email_id VARCHAR(100),
-    Phone_no BIGINT,
-    Address VARCHAR(100),
-    Date_of_birth DATE,
-    Gender VARCHAR(10),
-    Major VARCHAR(100),
-    GPA DECIMAL(4,2),
-    Grade TEXT CHECK (Grade IN ('A', 'B', 'C', 'D', 'F'))
+Create Table student_table (  
+    Student_id Int PRIMARY KEY,
+    Stu_name Varchar(100),
+    Department Varchar(100),
+    email_id Varchar(100),
+    Phone_no Bigint,
+    Address Varchar(100),
+    Date_of_birth Date,
+    Gender Varchar(10),
+    Major Varchar(100),
+    GPA Decimal(4,2),
+    Grade Text Check (Grade In ('A', 'B', 'C', 'D', 'F'))
 );
 
 -- 2. Data Entry 
 -- Insert 10 sample records into the "student_table" using INSERT command.
 
-INSERT INTO student_table VALUES
+Insert Into student_table Values
 (1, 'Ayush Chauhan', 'Computer Science', 'ayush.chauhan@example.com', 9876543210, 'Delhi', '2002-05-14', 'Male', 'AI', 8.50, 'A'),
 (2, 'Priya Sharma', 'Mechanical', 'priya.sharma@example.com', 9876543211, 'Mumbai', '2001-03-19', 'Female', 'Thermodynamics', 6.70, 'B'),
 (3, 'Rohan Mehta', 'Electrical', 'rohan.mehta@example.com', 9876543212, 'Pune', '2003-12-30', 'Male', 'Power Systems', 4.30, 'C'),
