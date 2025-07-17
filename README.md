@@ -5,7 +5,7 @@ This repository contains my SQL Capstone Project, completed as part of the SQL c
 
 Tools & Technologies
 Database System: MySQL
-IDE: MySQL Workbench
+IDE: MySQL Workbench, https://sqlfiddle.com/sql-server
 Language: SQL
 
 Project Structure
