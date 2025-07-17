@@ -51,31 +51,39 @@ Group By Region, Product_Id With Rollup;
 -- Explore sales data from different perspectives, such as product, region, and date. 
 
  -- by Product_id ( Done in online SQL server https://sqlfiddle.com/sql-server)
-SELECT 
+Select 
     ISNULL(CAST(Product_Id AS VARCHAR), 'All Products') AS Product_Id,
     SUM(Sales_Amount) AS Total_Sales
-FROM 
+From 
     sales_sample
-GROUP BY 
+Group By 
     CUBE (Product_Id)
-ORDER BY 
+Order By 
     Product_Id;
 
 (102, 'North', '2025-07-03', 1600);
 
 -- by Region ( Done in online SQL server https://sqlfiddle.com/sql-server)
-SELECT 
+Select 
     ISNULL(Region, 'All Regions') AS Region,
     SUM(Sales_Amount) AS Total_Sales
-FROM 
+From 
     sales_sample
-GROUP BY 
+Group By 
     CUBE (Region)
-ORDER BY 
+Order By 
     Region;
 
 -- by Date ( Done in online SQL server https://sqlfiddle.com/sql-server)
-
+Select 
+    ISNULL(CAST(Date AS VARCHAR), 'All Dates') AS Date_Perspective, 
+    SUM(Sales_Amount) AS Total_Sales
+From 
+    sales_sample
+Group By
+    Cube (Date)
+Order By 
+    Date_Perspective;
 
 -- d) Slice- To extract a subset of data based on specific criteria. Write a query to slice the data to 
 -- view sales for a particular region or date range. 
